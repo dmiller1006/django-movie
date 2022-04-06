@@ -1,0 +1,19 @@
+<style>
+    body {
+        background-color: gray;
+    }
+</style>
+
+<h1> History </h1>
+
+{% for movie in movies %}
+    <div>
+        MOVIE TITLE: {{ movie.title }}
+    </div>
+    <div>
+        {% for service in movie.services.all %}
+            SERVICE: {{ service }}
+        {% endfor %}
+    </div>
+    <hr>
+{% endfor %}
